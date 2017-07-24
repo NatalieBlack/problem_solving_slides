@@ -1,0 +1,250 @@
+.reveal {
+  background: #007aff;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal li,
+.reveal p {
+  color: #fff;
+}
+.reveal .slides img {
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal blockquote {
+  border: 0;
+  box-shadow: none;
+  width: 1000px;
+}
+
+.reveal .slides img.plogo {
+  width: 300px;
+  height: 300px;
+}
+
+.reveal .syntax pre {
+  background: #3f3f3f;
+  color: #dcdcdc;
+}
+
+.reveal .syntax pre .current-fragment {
+  font-weight: 900;
+}
+
+.reveal .slides pre {
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal .simple-example pre  {
+  width: 500px;
+  margin: 0px;
+}
+.reveal .simple-example pre code {
+  max-height: 700px;
+}
+
+.reveal .simple-example {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reveal .example pre {
+  width: 500px;
+  margin: 20px;
+}
+
+.reveal .example pre code {
+  max-height: 600px;
+
+}
+.reveal .example {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloopers .final {
+  display: inline-block;
+}
+
+.bloopers .blooper {
+  margin: 15px;
+}
+
+.reveal .otherstuff p {
+  font-size: 80%;
+  margin: 5px;
+}
+
+.reveal .stuff {
+  font-size: 90%;
+}
+
+/**
+ * this stylesheet is used to print reveal.js
+ * presentations to pdf.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: courier, 'courier new', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* slide backgrounds are placed inside of their slide when exporting to pdf */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* all elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* display slide speaker notes when 'shownotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* display slide numbers when 'slidenumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
