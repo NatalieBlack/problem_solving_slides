@@ -2,8 +2,13 @@
   <head>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/white.css">
-    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="css/custom.css">
+
   </head>
   <body>
     <div class="reveal">
@@ -52,7 +57,229 @@
               <li>Developing the step by step instructions for solving a set of problems</li>
             </ul>
           </section>
+          <section>
+            <h3>How to Research</h3>
+          </section>
+          <section>
+<ul>
+  <li>
+      google the error message
+    <ul>
+      <li>e.g. "git failed to push some refs to..."</li>
+    </ul>
+  </li>
+  <li>
+      describe the problem
+    <ul>
+      <li>e.g. "ruby to_i always returns zero"</li>
+    </ul>
 
+  </li>
+
+</ul>
+          </section>
+
+          <section>
+<p>getting the right level of specificity</p>
+<ul>
+  <li>too specific: "ruby remove all vowels from string" </li>
+  <li>too specific: "ruby remove letter n from string"</li>
+  <li>too general: "ruby remove string" </li>
+  <li>good balance: "ruby remove character from string"</li>
+
+</ul>
+          </section>
+          <section>
+<p>getting the right level of specificity</p>
+<ul>
+  <li>too specific: "css clear floating list of imgs" </li>
+  <li>too general: "css floats" </li>
+  <li>too general: "css content overlapping" </li>
+  <li>good balance: "css how to clear float"</li>
+  <li>good balance: "css floats content overlapping"</li>
+
+</ul>
+          </section>
+          <section>
+<h3>Research sources</h3>
+<ul>
+  <li>official documentation</li>
+  <li>Stack Overflow</li>
+  <li>other forums</li>
+  <li>tutorials</li>
+  <li>blog posts</li>
+</ul>
+          </section>
+
+          <section>
+<h3>Stack Overflow</h3>
+            <ul>
+              <li>Check the date (recent is good)</li>
+              <li>Often you don't need to read the question itself</li>
+              <li>Check whether the answer was “accepted”, upvoted many times, or if there are comments saying it worked</li>
+              <li>Identify which parts of the solution are relevant to you</li>
+              <li>Go over to the official docs for more details</li>
+            </ul>
+          </section>
+          <section>
+<h3>Reading the Ruby Docs</h3>
+          </section>
+
+          <section>
+<h3>How to write code</h3>
+          </section>
+          <section>
+<h3>Pseudocode</h3>
+<p>"uses the structural conventions of a normal programming language, but is intended for human reading rather than machine reading"</p>
+          </section>
+
+<section style="width: 1400px; position: absolute; left: -200px;">
+
+              <pre class="side-by-side-code">
+<p style="margin: 0px;">Pseudocode</p>
+                <code class="nohighlight">num = 0
+loop until num == 100
+
+  if num.divisible_by(3) and num.divisible_by(5)
+    print("Fizzbuz")
+  else if num.divisible_by(3)
+    print("Fizz")
+  else if num.divisible_by(5)
+    print("Buzz")
+  else
+    print(num)
+  end if
+
+  num = num + 1
+
+end loop
+</code></pre>
+              <pre class="side-by-side-code">
+<p style="margin: 0px;">Ruby</p>
+                <code class="hljs rb">numbers = (0..100)
+
+numbers.each do |num|
+
+  if num % 3 == 0 && num % 5 == 0
+    puts "Fizzbuz"
+  elsif num % 3 == 0
+    puts "Fizz"
+  elsif num % 5 == 0
+    puts "Buzz"
+  else
+    puts num
+  end
+end
+</code></pre>
+
+          </section>
+<section style="width: 1400px; position: absolute; left: -200px;">
+
+              <pre class="side-by-side-code">
+<p style="margin: 0px;">Pseudocode</p>
+                <code class="nohighlight">for num from 0 to 100 {
+
+  if num is a multiple of 3 and num is a multiple of 5 {
+    print "Fizzbuz"
+  else if num is a multiple of 3
+    print "Fizz"
+  else if num is a multiple of 5
+    print "Buzz"
+  else
+    print num
+  }
+
+}
+</code></pre>
+              <pre class="side-by-side-code">
+<p style="margin: 0px;">Ruby</p>
+                <code class="hljs rb">numbers = (0..100)
+
+numbers.each do |num|
+
+  if num % 3 == 0 && num % 5 == 0
+    puts "Fizzbuz"
+  elsif num % 3 == 0
+    puts "Fizz"
+  elsif num % 5 == 0
+    puts "Buzz"
+  else
+    puts num
+  end
+end
+</code></pre>
+
+          </section>
+          <section style="width: 1400px; position: absolute; left: -200px;">
+
+              <pre class="side-by-side-code">
+<p style="margin: 0px;">Pseudocode</p>
+                <code class="nohighlight">arguments: num (integer)
+returns: boolean
+define function negative? begin
+  return num < 0 
+end
+</code></pre>
+              <pre class="side-by-side-code">
+<p style="margin: 0px;">Ruby</p>
+                <code class="hljs rb">def negative?(num)
+  return num < 0
+end
+</code></pre>
+
+          </section>
+<section style="width: 1400px; position: absolute; left: -200px;">
+
+              <pre class="side-by-side-code">
+<p style="margin: 0px;">Pseudocode</p>
+                <code class="nohighlight">boolean function negative?(integer num) {
+  return num < 0 
+}
+</code></pre>
+              <pre class="side-by-side-code">
+<p style="margin: 0px;">Ruby</p>
+                <code class="hljs rb">def negative?(num)
+  return num < 0
+end
+</code></pre>
+
+          </section>
+          <section>
+<pre class="side-by-side-code">
+<p style="margin: 0px;">Not Pseudocode!</p>
+                <code class="nohighlight">
+define function that takes a number
+return true or false whether the number is negative
+</code></pre>
+          </section>
+          <section>
+<pre class="side-by-side-code">
+<p style="margin: 0px;">Not Pseudocode!</p>
+                <code class="nohighlight">
+for each number from 1 to 100
+
+if number is divisible by 3
+print Fizz
+
+if number is divisible by 5
+print Buzz
+
+if number is divisible by 3 and 5
+print Fizzbuzz
+
+otherwise print the number itself
+</code></pre>
+          </section>
+          <section>
+<h3>Combatting coder's block</h3>
+          </section>
+          <section>
+            <ul>
+              <li>write out a plan, translate into pseudocode, then translate into Ruby</li>
+              <li>get to any working solution first, then worry about making it nicer</li>
+              <li>when stuck, think about all the tools you have and see if any of them could help</li>
+            </ul>
+          </section>
           <section>
             <h2>Do I need to...</h2>
             
@@ -62,12 +289,12 @@
                 <p>-&gt; variable</p>
               </li>
               <li>
-                <p>do the same thing X number of times?</p>
-                <p>-&gt; loop</p>
+                <p>do the same thing to a list of values?</p>
+                <p>-&gt; iterate through a collection</p>
               </li>
               <li>
-                <p>do the same thing over and over until some condition is met?</p>
-                <p>-&gt; loop</p>
+                <p>keep track of pairs of data?</p>
+                <p>-&gt; hash</p>
               </li>
             </ul>
             </section>
@@ -75,20 +302,12 @@
             <section>
               <ul>
               <li>
-                <p>do the same thing to a list of values?</p>
-                <p>-&gt; iterate through a collection</p>
-              </li>
-              <li>
                 <p>maybe do one thing and maybe do something else?</p>
                 <p>-&gt; if/else</p>
               </li>
               <li>
                 <p>maybe do one thing and maybe do nothing?</p>
                 <p>-&gt; if with no else</p>
-              </li>
-              <li>
-                <p>keep track of pairs of data?</p>
-                <p>-&gt; hash</p>
               </li>
             </ul>
           </section>
@@ -114,6 +333,14 @@
               <li>
                 <p>Do I need some data back when I call this method?</p>
                 <p>-&gt; that data will be the return value and you'll need to save it in a variable when you call it</p>
+              </li>
+              <li>
+                <p>do the same thing X number of times?</p>
+                <p>-&gt; loop</p>
+              </li>
+              <li>
+                <p>do the same thing over and over until some condition is met?</p>
+                <p>-&gt; loop</p>
               </li>
             </ul>
           </section>

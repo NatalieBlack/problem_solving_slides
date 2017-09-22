@@ -88,6 +88,21 @@
   font-size: 90%;
 }
 
+pre.side-by-side-code {
+  display: inline-block;
+  width: 650px;
+  max-height: none;
+  font-size: 18px;
+  margin: none;
+  vertical-align: top;
+}
+pre.side-by-side-code code{
+  max-height: none;
+}
+.nohighlight {
+  background: #007aff;
+color: white;
+}
 /**
  * this stylesheet is used to print reveal.js
  * presentations to pdf.
